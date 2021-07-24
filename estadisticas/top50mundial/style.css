@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+*{
+  font-family: 'Play', sans-serif;   
+}
+
+body,html{
+    background: -webkit-linear-gradient(top, rgb(255, 166, 0), rgb(109, 91, 20)); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+#volver{
+  margin: 10px;
+}
+
+#volver:hover{
+    cursor: pointer;
+} 
+
+#titulo{
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  color: #111;
+  position: relative; 
+  top: -14px;
+}
+
+@media(max-width:850px){
+  #titulo{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #111;
+    position: relative; 
+    top: 0px;
+  }
+}
+
+@media(max-width:576px){
+  #volver{
+    height: 50px;
+    width: 50px;
+  }
+  #titulo{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #111;
+    position: relative; 
+    top: 26px;
+  }
+}
+
+#tabla30,#tabla60,#tabla20,#tabla50,#tabla100{
+  font-size: 25px;
+}
+
+@media(max-width:1000px){
+  #tabla30,#tabla60,#tabla20,#tabla50,#tabla100{
+    font-size: 21px;
+  }
+}
+
+@media(max-width:700px){
+  #tabla30,#tabla60,#tabla20,#tabla50,#tabla100{
+    font-size: 17px;
+  }
+}
+
+@media(max-width:500px){
+  #tabla30,#tabla60,#tabla20,#tabla50,#tabla100{
+    font-size: 13px;
+  }
+}
+
+#tabla100{
+  position: relative;
+  margin-bottom: 60px;
+}
+
+#row1{
+  margin-right: 300px;
+  margin-left: 300px;
+}
+
+@media(max-width:1500px){
+  #row1{
+    margin-right: 250px;
+    margin-left: 250px;
+  }
+}
+
+@media(max-width:1250px){
+  #row1{
+    margin-right: 170px;
+    margin-left: 170px;
+  }
+}
+
+@media(max-width:1050px){
+  #row1{
+    margin-right: 110px;
+    margin-left: 110px;
+  }
+}
+
+@media(max-width:800px){
+  #row1{
+    margin-right: 60px;
+    margin-left: 60px;
+  }
+}
+
+@media(max-width:600px){
+  #row1{
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media(max-width:500px){
+  #row1{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+#tipoMedio{
+  width: 200px;
+}
+
+@media(max-width:767px){
+  #tipoMedio{
+    position: relative;
+    top: 30px;
+  }
+}

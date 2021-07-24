@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicar punteria</title>
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../country-picker-flags/build/css/countrySelect.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+    <style>
+        body{
+            background-color: #222222;
+            height: 100%;
+        }
+        #puntuacion{
+            color: oldlace;
+        }
+        html{
+            height: 100%;
+        }
+        #volver:hover{
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+</head>
+<body onload="window.location.href = '20clicks.html?#close';">
+    <div id="divPuntos" class="container">
+        <div class="d-flex">
+            <div class="row">
+                <i id="volver" onclick="window.location.href='../index.html';" class="fas fa-arrow-alt-circle-left fa-5x"></i>
+                <h1 id="puntuacion" class="display-1">CLICKS: 0</h1>
+                <i id="reloj" class="fas fa-stopwatch fa-4x"></i>
+                <h1 id="timer">
+                    <span id="hour">00</span> :
+                    <span id="min">00</span> :
+                    <span id="sec">03</span> :
+                    <span id="milisec">00</span>
+                </h1>
+                <button id="btnEmpezar" onclick="sumar()" class="btn btn-secondary">EMPEZAR</button>
+            </div>
+        </div>
+    </div>
+    <div id="divContenido" class="container-fluid">
+        <label onclick="cambio()" style="position: relative; visibility: hidden;" id="punto">Ⓧ</label>
+    </div>
+
+    <div id="openModal" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2 id="tituloModal">Pon tus datos para agregar tu puntuación</h2><br>
+            <form>
+                <div id="divModalPais" class="mb-3">
+                    <label for="country" class="form-label"><b>Selecciona tu pais</b></label><br>
+                    <input type="text" id="country">
+                </div>
+                <div id="divModalNombre" class="mb-3">
+                    <label for="nombre" class="form-label"><b>Escribí tu nombre o el link de alguna red social (lo que prefieras)</b></label>
+                    <input class="form-control" type="text" id="nombre">
+                </div>
+                <div id="divModalTipo" class="mb-3">
+                    <label class="form-label"><b>Tipo de ordenador: </b></label> <label id="tipoUsuario" class="form-label"></label>
+                </div>
+                <div id="divModalPuntuacion" class="mb-3">
+                    <label class="form-label"><b>Tiempo: </b></label> <label id="pntsFinales" class="form-label"></label>
+                </div>
+                <br>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-success" onclick="guardar()">Enviar</button>
+                </div>
+              </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../country-picker-flags/build/js/countrySelect.min.js"></script>
+    <script>
+        $("#country").countrySelect();
+    </script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
